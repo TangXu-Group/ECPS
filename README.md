@@ -1,10 +1,10 @@
-#Introduction
+Introduction
 =
 This repository provides the code for the methods and experiments presented in our paper 'ECPS: Cross Pseudo Supervision Based on Ensemble Learning for Semi-Supervised Remote Sensing Change Detection'. (TGRS2024)
 ![image](https://github.com/TangXu-Group/ECPS/assets/74549002/e054afe5-0c60-4840-a560-c9f833f0b4bf)
 If you have any questions, you can send me an email. My mail address is yqunyang@163.com
 
-#Dataset loading
+Dataset loading
 =
 For the datasets CDD, LEVIR-CD, SYSU-CD and OSCD, it is required to prepare four text files for each dataset. The files are as follows:
 `wlabel.txt` for listing the labeled training data;
@@ -21,9 +21,10 @@ Each text file should list all items in the following format:
 For example:
 ![image](https://github.com/TangXu-Group/ECPS/assets/74549002/9c9901f9-3364-4e0f-aed8-b056bba19852)
 
-#Training
-##Prepare
+Training
 =
+Prepare
+---
 The based dependencies of runing codes:
 ```
 torchvision: 0.9.0
@@ -33,8 +34,8 @@ python: 3.8.17
 OR
 Using `requirements.txt`
 
-##Start
-=
+Start
+---
 ```
 python train.py -d CDD -t 0.05 -s 2
 ```
