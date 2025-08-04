@@ -169,7 +169,7 @@ if __name__=='__main__':
     '''Teacher model'''
     tea_model = nn.DataParallel(UNet(3,2)).cuda() #construct teacher model
     opt_tea = torch.optim.Adam(tea_model.parameters(),1e-4,betas=(0.9,0.999))
-    scheduler_tea = lr_scheduler.OneCycleLR(opt, max_lr=1e-3, anneal_strategy='cos', total_steps=epoch_num*opt_num_epoch)
+    scheduler_tea = lr_scheduler.OneCycleLR(opt_tea, max_lr=1e-3, anneal_strategy='cos', total_steps=epoch_num*opt_num_epoch)
 
     '''Loading pre-trained parameters'''
     if pretrained_stu_paths is not None:
